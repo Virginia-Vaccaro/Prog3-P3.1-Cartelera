@@ -6,7 +6,7 @@ export const initialMovies = [
     duration: "140 min",
     rating: "Apta para mayores de 13 años",
     poster:
-      "https://images.metadata.sky.com/pa/9a8c08cb-6677-4a7b-8968-3e42f9b8c045.jpg",
+      "https://m.media-amazon.com/images/S/pv-target-images/7b371349946b8f9db09651bcdf78c6d16f7edddd03f3c18f26d5d6194f4c3859.jpg",
     cinemas: ["Cine “El Cairo”", "Showcase Rosario", "Cines del centro"],
     synopsis:
       "La historia real de los fiscales Julio Strassera y Luis Moreno Ocampo en el Juicio a las Juntas.",
@@ -48,7 +48,7 @@ export const initialMovies = [
     duration: "152 min",
     rating: "Apta para mayores de 13 años",
     poster:
-      "https://m.media-amazon.com/images/S/pv-target-images/e9a43e34d013de3d7a99dae27165129f6b2b0d0223f8d0e0ec90bc74174426b8.jpg",
+      "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
     cinemas: ["Showcase Rosario", "Nuevo Monumental"],
     synopsis:
       "Batman tiene que mantener el equilibrio entre el heroísmo y el vigilantismo para detener al Joker.",
@@ -62,7 +62,7 @@ export const initialMovies = [
     duration: "100 min",
     rating: "Apta para todo público",
     poster:
-      "https://m.media-amazon.com/images/M/MV5BMTYzMDM4NzkxOV5BMl5BanBnXkFtZTgwNzM1MDI2NzM@._V1_.jpg",
+      "https://upload.wikimedia.org/wikipedia/en/4/4c/Toy_Story_4_poster.jpg",
     cinemas: [
       "Cinemark Hoyts",
       "Showcase Rosario",
@@ -94,8 +94,7 @@ export const initialMovies = [
     director: "Francis Ford Coppola",
     duration: "175 min",
     rating: "Apta para mayores de 18 años",
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwZC00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+    poster: "https://pics.filmaffinity.com/El_padrino-590289523-large.jpg",
     cinemas: ["Cine “El Cairo”", "Cines del centro"],
     synopsis:
       "El envejecido patriarca de una dinastía del crimen organizado transfiere el control de su imperio clandestino a su hijo reacio.",
@@ -137,7 +136,7 @@ export const initialMovies = [
     duration: "154 min",
     rating: "Apta para mayores de 18 años",
     poster:
-      "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjA4XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+      "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg",
     cinemas: ["Cine “El Cairo”", "Showcase Rosario"],
     synopsis:
       "Las vidas de dos sicarios de la mafia, un boxeador, la esposa de un gánster y dos bandidos se entrelazan.",

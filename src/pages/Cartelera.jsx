@@ -3,7 +3,7 @@ import MovieCard from "../components/MovieCard";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 
-const Cartelera = ({ movies, onDelete, onSelect }) => {
+const Cartelera = ({ movies, onDelete }) => {
   const [movieToDelete, setMovieToDelete] = useState(null);
   const navigate = useNavigate();
 
@@ -13,8 +13,8 @@ const Cartelera = ({ movies, onDelete, onSelect }) => {
   };
 
   const handleViewDetails = (movie) => {
-    onSelect(movie);
-    navigate("/details");
+    // onSelect(movie); (eliminamos porque ahora manejamos rutas dinámicas)
+    navigate(`/movies/:${movie.id}`);
   };
 
   return (

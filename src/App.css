@@ -12,7 +12,7 @@
 }
 
 .modal-content {
-  background: white;
+  background: rgb(171 162 162);
   padding: 30px;
   border-radius: 8px;
   text-align: center;
@@ -39,4 +39,109 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+/* 1. Fondo general para que parezca un cine (oscuro y elegante) */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+/* 2. Contenedor de las tarjetas (Grid responsivo) */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 3. Estilo de la Tarjeta (MovieCard) */
+.movie-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 77, 77, 0.3); /* Un brillo rojo sutil */
+}
+
+/* 4. Imágenes (Pósters) */
+.movie-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; /* Clave: ajusta la imagen sin deformarla */
+  border-bottom: 3px solid #ff4d4d;
+}
+
+/* 5. Contenido de la tarjeta (Textos) */
+.movie-card h3 {
+  margin: 15px;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.movie-card p {
+  margin: 0 15px 10px 15px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* 6. Botones de la tarjeta */
+.card-buttons {
+  margin-top: auto; /* Empuja los botones siempre al fondo */
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.card-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.card-buttons button:first-child {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #444;
+  color: #ff4d4d;
+}
+
+.card-buttons button:hover {
+  opacity: 0.8;
+}
+
+/* 7. Estilos para la vista de Detalle */
+.detail-container {
+  max-width: 900px;
+  margin: 50px auto;
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 15px;
+}
+
+.detail-container img {
+  width: 300px;
+  border-radius: 10px;
 }

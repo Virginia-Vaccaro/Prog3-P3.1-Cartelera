@@ -1,6 +1,6 @@
 import React from "react";
 
-const NewMovie = () => {
+const NewMovie = ({ onAdd }) => {
   return <div></div>;
 };
 
