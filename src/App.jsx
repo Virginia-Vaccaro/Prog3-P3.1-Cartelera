@@ -5,6 +5,7 @@ import { initialMovies } from "./data/movies";
 import Cartelera from "./pages/Cartelera";
 import MovieDetail from "./pages/MovieDetail";
 import NewMovie from "./pages/NewMovie";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [movies, setMovies] = useState(initialMovies);
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route
           path="/"
@@ -30,7 +32,10 @@ function App() {
           path="/movies/:movieId"
           element={<MovieDetail movies={movies} />}
         />
-        <Route path="/newmovie" element={<NewMovie onAdd={addMovie} />} />
+        <Route
+          path="/newMovie"
+          element={<NewMovie movies={movies} onAdd={addMovie} />}
+        />
       </Routes>
     </BrowserRouter>
   );

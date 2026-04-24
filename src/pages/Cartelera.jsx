@@ -14,7 +14,7 @@ const Cartelera = ({ movies, onDelete }) => {
 
   const handleViewDetails = (movie) => {
     // onSelect(movie); (eliminamos porque ahora manejamos rutas dinámicas)
-    navigate(`/movies/:${movie.id}`);
+    navigate(`/movies/${movie.id}`);
   };
 
   return (
