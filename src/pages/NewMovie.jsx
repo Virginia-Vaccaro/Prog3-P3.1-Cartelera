@@ -2,6 +2,7 @@ import React from "react";
 
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { validateForm } from "../utils/movieValidations";
 
 const NewMovie = ({ movies, onAdd }) => {
   const navigate = useNavigate();
@@ -48,45 +49,17 @@ const onChange = (e) => {
     }
   };
 
-  const validate = () => {
-    const errores = {};
-
-    if (!formData.title.trim()) errores.title = "El título es obligatorio"; //aca mismo se crea al objeto errores la prop title con lo igualado.
-    if (!formData.director.trim())
-      errores.director = "El director es obligatorio";
-    if (!formData.poster.trim()) errores.poster = "El poster es obligatorio";
-    if (!formData.duration.trim())
-      errores.duration = "La duración es obligatoria";
-    if (!formData.rating) errores.rating = "El rating es obligatorio";
-    if (!formData.sinopsis.trim())
-      errores.sinopsis = "La sinopsis es obligatoria";
-    if (formData.cinemas == [])
-      errores.rating = "Debés seleccionar al menos un cine";
-    if (!formData.date) errores.date = "La fecha es obligatoria";
-    if (!formData.time.trim()) errores.time = "El time es obligatorio";
-
-    //const titleFiltered = movies.filter(m => m.title.tolowerCase().include(formData.title.toLowerCase()))
-
-    const titleFiltered = movies.find((m) =>
-      m.title.toLowerCase().includes(formData.title.toLowerCase()),
-    );
-
-    if (titleFiltered) {
-      errores.title = "La película ingresada ya está registrada";
-    }
-
-    setError(errores);
-
-    return Object.values(errores).length === 0;
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (validate()) {
+    const { isValid, errors } = validateForm(formData, movies);
+
+    if (isValid) {
       const newMovie = { id: Date.now(), ...formData }; //esto seria equivalente a escribir uno a uno lo que hay en el arreglo formData
       onAdd(newMovie);
       navigate("/");
+    } else {
+      setError(errors);
     }
   };
 

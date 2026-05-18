@@ -1,6 +1,7 @@
 // incluir un botón al final que diga "Volver a la cartelera" y navegue a esa vista
 // utilizar el hook useNavigate
 import { useNavigate, useParams } from "react-router";
+import { useEffect } from "react";
 
 const MovieDetail = ({ movies }) => {
   const navigate = useNavigate();
@@ -16,6 +17,17 @@ const MovieDetail = ({ movies }) => {
       </div>
     );
   }
+
+  useEffect(() => {
+    if (movie) {
+      document.title = `${movie.title}`;
+    }
+
+    // Opcional: Limpiar el título al salir del componente
+    return () => {
+      document.title = "Cine Rosario - Cartelera";
+    };
+  }, [movie]);
 
   return (
     <div className="detail-container">
